@@ -6,6 +6,7 @@ import About from "./pages/about/About";
 import Navbar from "./components/navbar/FormNavbar";
 import BookmarkPage from "./pages/bookmarpage/BookmarkPage";
 import Intro from "./pages/intro/Intro";
+import Maani from "./pages/maani/MaaniPage"
 import "./app.css";
 
 export default function App() {
@@ -29,6 +30,8 @@ export default function App() {
 
           <Route path="/about" element={<About />} />
           <Route path="/bookmark" element={<BookmarkPage />} />
+
+          <Route path="/maani" element={<Maani />} />
 
         </Routes>
 

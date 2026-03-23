@@ -27,6 +27,7 @@
 
 .panel p{
   font-size: large;
+  line-height: 2;
 }
 
 .analysis-mode{
@@ -60,4 +61,40 @@
 .mode-btn.active{
   background:#3f5564;
   box-shadow:0 4px 12px rgba(22,160,133,0.35);
+}
+
+@media (max-width: 768px) {
+
+  /* tombol accordion */
+  .accordion-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* panel */
+  .panel {
+    padding: 10px;
+    margin: 8px 0;
+  }
+
+  .panel p {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  /* mode buttons jadi vertikal */
+  .analysis-mode {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  /* tombol full width */
+  .mode-btn {
+    width: 100%;
+    min-width: unset;
+    font-size: 14px;
+    padding: 12px;
+  }
+
 }

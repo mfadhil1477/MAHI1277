@@ -10,7 +10,11 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="logo">
-            📖 Ma'anil Hadis App
+            <img src="/logo.png" alt="MHI Logo" />
+            <div className="logo-text">
+            <span className="logo-title">MHI App</span>
+            <span className="logo-sub">Ma’anil Hadis</span>
+            </div>
           </Link>
 
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>

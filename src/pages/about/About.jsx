@@ -6,14 +6,15 @@ export default function About() {
       
       {/* HERO */}
       <section className="about-hero">
-        <h1>Tentang Ma’anil Hadis</h1>
+        <h1>Tentang MHI APP</h1>
         <p className="arab">
           إِنَّمَا بُعِثْتُ لِأُتَمِّمَ مَكَارِمَ الْأَخْلَاقِ
         </p>
         <p className="tagline">
-Ma’anil Hadis Interaktif adalah aplikasi pembelajaran berbasis web yang dikembangkan sebagai media digital untuk membantu mahasiswa memahami hadis secara lebih mendalam dan kontekstual. Aplikasi ini hadir sebagai respons terhadap kebutuhan pembelajaran hadis di era digital, di mana akses informasi sangat cepat namun belum tentu disertai pemahaman yang komprehensif.
-
-Berdasarkan hasil observasi dan penelitian, sebagian besar mahasiswa masih menggunakan aplikasi hadis hanya sebatas membaca teks dan terjemahan tanpa penjelasan makna yang memadai. Oleh karena itu, aplikasi ini dirancang untuk menghadirkan pembelajaran ma’anil hadis yang lebih sistematis, akademik, dan mudah diakses.
+          MHI (Ma’anil Hadis Insight) merupakan sebuah platform pembelajaran hadis berbasis digital yang dirancang untuk membantu pengguna memahami hadis secara lebih mendalam, tidak hanya dari segi teks, tetapi juga dari makna, konteks, dan relevansinya dalam kehidupan modern. Berangkat dari disiplin ilmu Ma’anil Hadis, MHI hadir sebagai jembatan antara kajian hadis klasik dengan kebutuhan pemahaman masyarakat masa kini yang dinamis.
+          MHI juga mengintegrasikan pendekatan interaktif dan teknologi digital dalam proses pembelajarannya. Setiap hadis yang disajikan tidak hanya dilengkapi dengan terjemahan, tetapi juga penjelasan makna, analisis konteks, serta insight atau hikmah yang dapat diterapkan dalam kehidupan sehari-hari. Dengan demikian, hadis tidak lagi dipahami sebagai teks yang jauh dari realitas, melainkan sebagai pedoman hidup yang relevan dan aplikatif. 
+          Selain itu, MHI dikembangkan untuk menjawab tantangan zaman, di mana kebutuhan akan pembelajaran yang fleksibel, mudah diakses, dan menarik semakin meningkat. Melalui platform ini, pengguna dari berbagai kalangan—baik mahasiswa, santri, maupun masyarakat umum—dapat mempelajari hadis dengan cara yang lebih sistematis, terarah, dan sesuai dengan perkembangan teknologi. 
+          Dengan menggabungkan keilmuan hadis dan inovasi digital, MHI berkomitmen untuk menjadi sarana pembelajaran yang tidak hanya informatif, tetapi juga inspiratif. Harapannya, MHI dapat membantu membangun pemahaman hadis yang lebih luas, mendalam, dan kontekstual, sehingga nilai-nilai yang terkandung di dalamnya dapat diimplementasikan secara nyata dalam kehidupan modern.
         </p>
       </section>
 
