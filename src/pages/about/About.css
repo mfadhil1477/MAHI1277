@@ -263,6 +263,11 @@
 /* 📱 MOBILE */
 /* ================================= */
 @media (max-width: 768px) {
+
+  .tagline{
+    padding: 10px;
+    font-size: 18px;
+  }
   .profile-card {
     grid-template-columns: 1fr;
   }
