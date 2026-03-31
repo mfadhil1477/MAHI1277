@@ -1,7 +1,8 @@
+/* ================= NAVBAR ================= */
 .navbar {
   position: sticky;
   top: 0;
-  -webkit-backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(15px);
   background: rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -10,14 +11,13 @@
   z-index: 1000;
 }
 
-
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* LOGO CONTAINER */
+/* ================= LOGO ================= */
 .logo {
   display: flex;
   align-items: center;
@@ -25,44 +25,37 @@
   text-decoration: none;
 }
 
-/* IMAGE */
 .logo img {
   width: 45px;
   height: 45px;
-  object-fit: contain;
   border-radius: 100px;
   transition: 0.3s;
 }
 
-/* TEXT */
+.logo:hover img {
+  transform: scale(1.1) rotate(2deg);
+}
+
 .logo-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
 }
 
-/* TITLE */
 .logo-title {
   font-size: 18px;
   font-weight: bold;
   color: white;
 }
 
-/* SUBTITLE */
 .logo-sub {
   font-size: 12px;
   color: rgba(255,255,255,0.7);
 }
 
-/* HOVER EFFECT */
-.logo:hover img {
-  transform: scale(1.1) rotate(2deg);
-}
-
+/* ================= DESKTOP MENU ================= */
 .nav-links {
   display: flex;
   gap: 25px;
-  z-index: 1001;
 }
 
 .nav-links a {
@@ -70,102 +63,110 @@
   text-decoration: none;
   font-weight: 500;
   position: relative;
-  transform: translateX(20px);
-  transition: all 0.1s ease ease-in-out;
+  transition: 0.3s;
 }
-
-.nav-links.active a {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 
 .nav-links a:hover {
-  opacity: 0.8;
-  color: #ffffff;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-    border-bottom: 2px solid #9f7aea;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255,255,255,0.6);
 }
 
-/* Active Link */
 .nav-links a.active {
-  /* border-bottom: 2px solid #fff; */
-  padding-bottom: 3px;
-  color: #ffffff;
-
-  padding-bottom: 4px;
+  color: #fff;
+  border-bottom: 2px solid #9f7aea;
 }
 
-/* Hamburger */
+/* ================= HAMBURGER ================= */
 .hamburger {
-display: none;
-
-  font-size: 18px; /* lebih kecil */
-  color: rgba(255, 255, 255, 0.8); /* putih transparan */
-
+  display: none;
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
   padding: 8px 12px;
-  border-radius: 12px; /* melengkung */
-
-  background: rgba(255, 255, 255, 0.08); /* glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.15);
-
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .hamburger:hover {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
   transform: scale(1.05);
 }
 
+/* ================= BACKDROP ================= */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 900;
+}
 
+.backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
 
-/* Responsive */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-   .nav-links {
-    position: fixed;
-    top: 20px;              /* kasih jarak dari atas */
-    right: 20px;            /* kasih jarak dari kanan */
-    height: 100vh;
-    width: 250px;           /* jangan terlalu besar */
-
-    background: rgba(30, 40, 90, 0.6); /* transparan */
-    /* -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px); */
-
-    border-radius: 20px;    /* melengkung */
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    flex-direction: column;
-    gap: 30px;
-    padding-top: 100px;
-    padding-left: 25px;
-
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-
-    transform: translateX(120%);
-    transition: transform 0.4s ease-in-out;
-
-    z-index: 999;
-  }
-  
-
-  .nav-links.active {
-    transform: translateX(0);
-  }
 
   .hamburger {
     display: block;
     z-index: 1100;
   }
-  
-    .logo-sub {
-    display: none; /* biar nggak penuh di HP */
+
+  .logo-sub {
+    display: none;
   }
 
   .logo-title {
     font-size: 16px;
   }
-}
 
+  /* SIDEBAR */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 260px;
+
+    background: rgba(30, 40, 90, 0.75);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 100px 25px;
+
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+
+    border-left: 1px solid rgba(255,255,255,0.1);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: 0.3s;
+  }
+
+  .nav-links.active a {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

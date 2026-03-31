@@ -5,48 +5,52 @@ import "./Navbar.css";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="logo">
+          
+          {/* LOGO */}
+          <Link to="/" className="logo" onClick={closeMenu}>
             <img src="/logo.png" alt="MHI Logo" />
             <div className="logo-text">
-            <span className="logo-title">MHI App</span>
-            <span className="logo-sub">Ma’anil Hadis</span>
+              <span className="logo-title">MHI App</span>
+              <span className="logo-sub">Ma’anil Hadis</span>
             </div>
           </Link>
 
+          {/* MENU */}
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-            <NavLink to="/" onClick={() => setMenuOpen(false)}>
+            <NavLink to="/" onClick={closeMenu}>
               Home
             </NavLink>
-          <NavLink to="/bookmark" className="nav-link">Bookmark</NavLink>
-            {/* <NavLink to="/hadis" onClick={() => setMenuOpen(false)}>
-              Daftar Hadis
-            </NavLink> */}
 
-            <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+            <NavLink to="/bookmark" onClick={closeMenu}>
+              Bookmark
+            </NavLink>
+
+            <NavLink to="/about" onClick={closeMenu}>
               Tentang Kami
             </NavLink>
           </div>
 
+          {/* HAMBURGER */}
           <div
             className="hamburger"
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setMenuOpen(prev => !prev)}
           >
             {menuOpen ? "✕" : "☰"}
           </div>
         </div>
       </nav>
 
-      {/* Backdrop */}
-      {menuOpen && (
-        <div
-          className="backdrop"
-          onClick={() => setMenuOpen(false)}
-        />
-      )}
+      {/* BACKDROP (klik luar sidebar) */}
+      <div
+        className={`backdrop ${menuOpen ? "show" : ""}`}
+        onClick={closeMenu}
+      />
     </>
   );
 }

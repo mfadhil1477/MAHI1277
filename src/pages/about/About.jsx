@@ -1,4 +1,5 @@
 import "./About.css";
+import BackButton from "../../backbutton/BackButton";
 
 export default function About() {
   return (
@@ -8,13 +9,14 @@ export default function About() {
       <section className="about-hero">
         <h1>Tentang MHI APP</h1>
         <p className="arab">
-          إِنَّمَا بُعِثْتُ لِأُتَمِّمَ مَكَارِمَ الْأَخْلَاقِ
+وَمَا طَلَبُ المَعَالِي بِالتَّمَنِّي
+وَلَكِنْ تُؤْخَذُ الدُّنْيَا غِلَابَا
+        <br />
+        <i>"Kemuliaan tidak didapat dengan angan-angan, tapi dengan usaha dan perjuangan"</i>
         </p>
+         <b>Abu al-Tayyib al-Mutanabbi</b>
         <p className="tagline">
-          MHI (Ma’anil Hadis Insight) merupakan sebuah platform pembelajaran hadis berbasis digital yang dirancang untuk membantu pengguna memahami hadis secara lebih mendalam, tidak hanya dari segi teks, tetapi juga dari makna, konteks, dan relevansinya dalam kehidupan modern. Berangkat dari disiplin ilmu Ma’anil Hadis, MHI hadir sebagai jembatan antara kajian hadis klasik dengan kebutuhan pemahaman masyarakat masa kini yang dinamis.
-          MHI juga mengintegrasikan pendekatan interaktif dan teknologi digital dalam proses pembelajarannya. Setiap hadis yang disajikan tidak hanya dilengkapi dengan terjemahan, tetapi juga penjelasan makna, analisis konteks, serta insight atau hikmah yang dapat diterapkan dalam kehidupan sehari-hari. Dengan demikian, hadis tidak lagi dipahami sebagai teks yang jauh dari realitas, melainkan sebagai pedoman hidup yang relevan dan aplikatif. 
-          Selain itu, MHI dikembangkan untuk menjawab tantangan zaman, di mana kebutuhan akan pembelajaran yang fleksibel, mudah diakses, dan menarik semakin meningkat. Melalui platform ini, pengguna dari berbagai kalangan—baik mahasiswa, santri, maupun masyarakat umum—dapat mempelajari hadis dengan cara yang lebih sistematis, terarah, dan sesuai dengan perkembangan teknologi. 
-          Dengan menggabungkan keilmuan hadis dan inovasi digital, MHI berkomitmen untuk menjadi sarana pembelajaran yang tidak hanya informatif, tetapi juga inspiratif. Harapannya, MHI dapat membantu membangun pemahaman hadis yang lebih luas, mendalam, dan kontekstual, sehingga nilai-nilai yang terkandung di dalamnya dapat diimplementasikan secara nyata dalam kehidupan modern.
+          MHI (Ma’anil Hadis Insight) merupakan platform pembelajaran hadis berbasis digital yang dikembangkan berdasarkan penelitian skripsi. Aplikasi ini membantu pengguna memahami hadis secara lebih mendalam melalui penyajian teks, terjemahan, serta penjelasan makna dan konteks yang relevan dengan kehidupan modern. Dengan pendekatan yang sistematis dan interaktif, MHI diharapkan dapat menjadi media pembelajaran yang mudah diakses, menarik, serta mampu menjembatani kajian hadis klasik dengan kebutuhan pemahaman masa kini
         </p>
       </section>
 
@@ -42,7 +44,6 @@ export default function About() {
       <section className="fitur">
         <h2>Fitur Utama Aplikasi</h2>
         <div className="fitur-grid">
-          <div className="fitur-card"> 🔎 Pencarian Hadis berdasarkan kata kunci dan tema</div>
           <div className="fitur-card">📖 Penjelasan Ma’anil Hadis yang membantu memahami makna secara kontekstual</div>
           <div className="fitur-card">📖 Detail & Penjelasan</div>
           <div className="fitur-card">📚 Referensi Tambahan dari literatur kitab dan jurnal</div>
@@ -64,35 +65,61 @@ export default function About() {
       </section>
 
       {/* DEVELOPER */}
-      <section className="developer">
-        <h2>Tentang Pengembang</h2>
-        <div className="dev-card">
-          <img
-            src="/foto.jpg.jpeg"
-            alt="Foto saya"
-          />
-          <div>
-            <h3>Kang Fadhil</h3>
-            <p>Pembelajar Ilmu Hadis & Programmer</p>
-            <ul>
-              <li>Mahasiswa Ilmu Hadis</li>
-              <li>Menggabungkan teknologi & khazanah ilmu hadis</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+<section className="developer">
+  <h2>Tentang Pengembang</h2>
+
+<div className="profile-card">
+
+  {/* 🔥 KIRI (dibungkus) */}
+  <div className="left">
+    <img src="/foto.jpg.jpeg" className="profile-img" />
+    <h3>Kang Fadhil</h3>
+    <p className="role">Mahasiswa Ilmu Hadis</p>
+  </div>
+
+  {/* 🔥 KANAN */}
+  <div className="right">
+
+    <div className="section">
+      <h4>Profil</h4>
+        <p><b>Nama:</b> Mohammad Fadhil Febryansyah</p>
+        <p><b>Status:</b> Mahasiswa</p>
+        <p><b>Alamat:</b> Dusun Petengan, Desa Tambak Rejo, Kecamatan Jombang, Kabupaten Jombang</p>
+  
+    </div>
+
+
+    <div className="section">
+      <h4>Kontak</h4>
+      <p> <b>Email:</b> kangfadhil069@gmail.com</p>
+      <p> <b>Nomor Telepon: </b>081239352594</p>
+    </div>
+
+    <div className="section">
+      <h4>Skill</h4>
+      <div className="skills">
+        <span>React</span>
+        <span>JavaScript</span>
+        <span>API</span>
+        <span>Hadis</span>
+      </div>
+    </div>
+    <div className="section">
+      <h4>Pendidikan</h4>
+      <ul>
+        <li>MI Bahrul Ulum Tambak Beras Jombang</li>
+        <li>Muallimin 6 Tahun Bahrul Ulum Tambak beras Jombang</li>
+        <li>UIN Sayyid Ali Rahmatullah Tulungagung</li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+</section>
+  <BackButton />
 
       {/* ROADMAP */}
-      <section className="roadmap">
-        <h2>Roadmap & Pengembangan</h2>
-        <ul>
-          <li>✅ Versi 1 - Kategori Dasar</li>
-          <li>🔄 Versi 2 - Tafsir Hadis</li>
-          <li>⭐ Versi 3 - Bookmark & Favorite</li>
-          <li>🚀 Versi 4 - Mode Offline</li>
-        </ul>
-      </section>
-
     </div>
   );
 }

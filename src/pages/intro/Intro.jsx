@@ -1,6 +1,7 @@
 
 import { useParams, Link } from "react-router-dom";
 import "./Intro.css";
+import BackButton from "../../backbutton/BackButton";
 
 export default function Intro() {
 
@@ -35,6 +36,8 @@ gender: {
       <Link to={`/hadis/${kategori}`} className="btn-hadis">
         Lihat Hadis
       </Link>
+
+      <BackButton />
 
     </div>
   );

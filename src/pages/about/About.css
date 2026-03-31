@@ -30,8 +30,12 @@
   font-family: "Amiri", serif;
   font-size: 24px;
   margin-bottom: 10px;
+  line-height: 2;
 }
 
+.arab i {
+  font-size: 18px;
+}
 .tagline {
   opacity: 0.9;
   text-align: justify;
@@ -154,112 +158,123 @@
   opacity: 1;
 }
 /* DEVELOPER */
+/* ====== CONTAINER ====== */
 .developer {
-  margin-bottom: 60px;
+  padding: 40px 20px;
   text-align: center;
 }
 
-.dev-card {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 30px;
-  border-radius: 20px;
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.15);
+/* ====== CARD ====== */
+.developer {
+  padding: 40px 20px;
 }
 
-.dev-card img {
-  width: 150px;
+/* CARD */
+.profile-card {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  padding: 30px;
+  background: #3c5568;
+  border-radius: 10px;
+  color: white;
+}
+
+/* ===== LEFT ===== */
+.left {
+  text-align: center;
+  padding-right: 20px;
+  border-right: 2px solid rgba(255,255,255,0.2); /* 🔥 GARIS VERTIKAL */
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  /* border: 4px solid white; */
+  border: 3px solid #ffd369;
+  margin-bottom: 10px;
 }
 
-/* ROADMAP */
-.roadmap {
-  text-align: center;
+.role {
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-.roadmap ul {
+/* ===== RIGHT ===== */
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* SECTION */
+.section {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15); /* 🔥 GARIS HORIZONTAL */
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section h4 {
+  color: #ffd369;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.section p {
+  margin: 5px 0;
+  line-height: 1.6;
+  text-align: justify;
+  font-size: 16px;
+}
+
+/* LIST */
+.section ul {
+  padding-left: 15px;
   list-style: none;
-  padding: 0;
+  text-align: justify;
+  
 }
 
-.roadmap li {
-  margin: 10px 0;
+.section li {
+  margin-bottom: 6px;
 }
 
+/* SKILL */
+.section .skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
 
-/* ================= MOBILE ================= */
+.skills span {
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* ================================= */
+/* 📱 MOBILE */
+/* ================================= */
 @media (max-width: 768px) {
-  .about-container {
-    padding: 40px 15px;
+  .profile-card {
+    grid-template-columns: 1fr;
   }
 
-  /* HERO */
-  .about-hero h1 {
-    font-size: 28px;
+  .left {
+    border-right: none;
+    border-bottom: 2px solid rgba(255,255,255,0.2); /* 🔥 jadi horizontal */
+    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 
-  .arab {
-    font-size: 18px;
-  }
-
-  .tagline {
-    font-size: 14px;
-    text-align: justify;
-    line-height: 2;
-  }
-
-  /* CARD */
-  .card {
-    padding: 20px;
-  }
-
-  /* VISI MISI jadi stack */
-  .visi-misi {
-    flex-direction: column;
-  }
-
-  /* FITUR */
-  .fitur-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .fitur-card {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  /* TEKNOLOGI */
-  .tech-list {
-    gap: 12px;
-  }
-
-  .tech-list span {
-    min-width: 100px;
-    padding: 12px 20px;
-    font-size: 14px;
-  }
-
-  /* DEVELOPER */
-  .dev-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .dev-card img {
-    width: 120px;
-  }
-
-  /* ROADMAP */
-  .roadmap li {
-    font-size: 14px;
+  .right {
+    text-align: left;
   }
 }

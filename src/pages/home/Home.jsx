@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import CategoryCard from "./categorycard/CategoryCard";
 import "./Home.css";
-
+ 
 export default function Home() {
   const navigate = useNavigate();
 
@@ -47,7 +47,7 @@ export default function Home() {
         <div className="intro-card">
           <div className="card-content">
             <div className="card-text">
-              <h2>📖 Apa Itu MHI APP?</h2>
+              <h2>Apa Itu MHI APP?</h2>
               <p>
                 Platform pembelajaran hadis interaktif untuk memahami makna, konteks,
                 dan relevansi hadis dalam kehidupan modern.
