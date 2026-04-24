@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchHadis } from "../../../services/HadisApi";
 import HadisCard from "../../../components/cardhadis/CardHadis";
 import SearchBar from "../../../components/searchbar/SearchBar";
+import BackButton from "../../../components/backbutton/BackButton";
 import "./HadisList.css";
 
 export default function HadisList() {
@@ -57,6 +58,7 @@ export default function HadisList() {
           ⬅ Sebelumnya
         </button>
 
+        
         <button
           className="btn-next"
           onClick={nextHadis}
@@ -66,6 +68,7 @@ export default function HadisList() {
         </button>
 
       </div>
+      <BackButton />
     </div>
   );
 }

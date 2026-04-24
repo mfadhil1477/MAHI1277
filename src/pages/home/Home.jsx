@@ -9,10 +9,9 @@ export default function Home() {
   const categories = [
     { title: "EKOLOGI", subtitle: "Hadis Lingkungan", icon: "🌿", path: "/intro/ekologi" },
     { title: "GENDER", subtitle: "Relasi Gender", icon: "⚧️", path: "/intro/gender" },
-    { title: "PUASA", subtitle: "Shaum", icon: "🌙🛐", path: "/hadis/puasa" },
-    { title: "MUAMALAH", subtitle: "Muamalah", icon: "🤝📜", path: "/hadis/muamalah" },
-    { title: "HAJI", subtitle: "Hajj", icon: "🕋👳🏻‍♂️", path: "/hadis/haji" },
-    { title: "AKHLAK", subtitle: "Akhlaq", icon: "🌸❤️", path: "/hadis/akhlak" },
+    { title: "PARENTING", subtitle: "Mendidik Anak", icon: "👨‍👩‍👧", path: "/intro/parenting" },
+    { title: "MUAMALAH", subtitle: "Muamalah", icon: "🤝📜", path: "/intro/muamalah" },
+    { title: "AKHLAK", subtitle: "Akhlaq", icon: "🌸❤️", path: "/intro/akhlak" },
   ];
 
   const [activeMaani, setActiveMaani] = useState("definisi");

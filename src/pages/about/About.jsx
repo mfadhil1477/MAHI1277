@@ -1,5 +1,5 @@
 import "./About.css";
-import BackButton from "../../backbutton/BackButton";
+import BackButton from "../../components/backbutton/BackButton";
 
 export default function About() {
   return (

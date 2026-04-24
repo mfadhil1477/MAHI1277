@@ -15,9 +15,10 @@ function Navbar() {
           {/* LOGO */}
           <Link to="/" className="logo" onClick={closeMenu}>
             <img src="/logo.png" alt="MHI Logo" />
+            
             <div className="logo-text">
-              <span className="logo-title">MHI App</span>
-              <span className="logo-sub">Ma’anil Hadis</span>
+              <span className="logo-title">MHI APP</span>
+              <span className="logo-sub">Ma’anil Hadis Insight</span>
             </div>
           </Link>
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Accordion from "../accordion/AccordionHadis"; // aktifkan kalau sudah ada
 import "./CardHadis.css"
 import BookmarkButton from "../bookmarkbutton/BookmarkBtn";
-import BackButton from "../../backbutton/BackButton";
+
 
 export default function CardHadis({ hadis }) {
   const [showTranslate, setShowTranslate] = useState(false);
@@ -50,8 +50,8 @@ export default function CardHadis({ hadis }) {
 
       <BookmarkButton hadis={hadis} />
 
-      <BackButton />
       
+    
     </div>
     </div>
   );
