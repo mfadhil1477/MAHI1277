@@ -59,6 +59,12 @@
   transform: translateY(-5px);
 }
 
+.card li {
+  line-height: 1.5;
+  font-size: 15px;
+  list-style-type:decimal;
+}
+
 /* VISI MISI */
 .visi-misi {
   display: flex;
@@ -234,7 +240,7 @@
 
 /* LIST */
 .section ul {
-  padding-left: 15px;
+  padding-left: 0px;
   list-style: none;
   text-align: justify;
   
